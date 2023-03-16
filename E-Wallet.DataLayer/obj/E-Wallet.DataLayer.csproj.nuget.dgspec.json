@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Projects\\E-Wallet_Backend\\E-Wallet.WebApi\\E-Wallet.DataLayer\\E-Wallet.DataLayer.csproj": {}
+    "C:\\Projects\\E-Wallet_Backend\\E-Wallet\\E-Wallet.DataLayer\\E-Wallet.DataLayer.csproj": {}
   },
   "projects": {
-    "C:\\Projects\\E-Wallet_Backend\\E-Wallet.WebApi\\E-Wallet.DataLayer\\E-Wallet.DataLayer.csproj": {
+    "C:\\Projects\\E-Wallet_Backend\\E-Wallet\\E-Wallet.DataLayer\\E-Wallet.DataLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projects\\E-Wallet_Backend\\E-Wallet.WebApi\\E-Wallet.DataLayer\\E-Wallet.DataLayer.csproj",
+        "projectUniqueName": "C:\\Projects\\E-Wallet_Backend\\E-Wallet\\E-Wallet.DataLayer\\E-Wallet.DataLayer.csproj",
         "projectName": "E-Wallet.DataLayer",
-        "projectPath": "C:\\Projects\\E-Wallet_Backend\\E-Wallet.WebApi\\E-Wallet.DataLayer\\E-Wallet.DataLayer.csproj",
+        "projectPath": "C:\\Projects\\E-Wallet_Backend\\E-Wallet\\E-Wallet.DataLayer\\E-Wallet.DataLayer.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Projects\\E-Wallet_Backend\\E-Wallet.WebApi\\E-Wallet.DataLayer\\obj\\",
+        "outputPath": "C:\\Projects\\E-Wallet_Backend\\E-Wallet\\E-Wallet.DataLayer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -46,6 +46,12 @@
           "targetAlias": "net6.0",
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
               "version": "[7.0.4, )"
             }

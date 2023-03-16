@@ -1,0 +1,14 @@
+C:\Projects\E-Wallet_Backend\E-Wallet\E-Wallet.Core\bin\Debug\net6.0\E-Wallet.Core.deps.json
+C:\Projects\E-Wallet_Backend\E-Wallet\E-Wallet.Core\bin\Debug\net6.0\E-Wallet.Core.dll
+C:\Projects\E-Wallet_Backend\E-Wallet\E-Wallet.Core\bin\Debug\net6.0\E-Wallet.Core.pdb
+C:\Projects\E-Wallet_Backend\E-Wallet\E-Wallet.Core\obj\Debug\net6.0\E-Wallet.Core.csproj.AssemblyReference.cache
+C:\Projects\E-Wallet_Backend\E-Wallet\E-Wallet.Core\obj\Debug\net6.0\E-Wallet.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projects\E-Wallet_Backend\E-Wallet\E-Wallet.Core\obj\Debug\net6.0\E-Wallet.Core.AssemblyInfoInputs.cache
+C:\Projects\E-Wallet_Backend\E-Wallet\E-Wallet.Core\obj\Debug\net6.0\E-Wallet.Core.AssemblyInfo.cs
+C:\Projects\E-Wallet_Backend\E-Wallet\E-Wallet.Core\obj\Debug\net6.0\E-Wallet.Core.csproj.CoreCompileInputs.cache
+C:\Projects\E-Wallet_Backend\E-Wallet\E-Wallet.Core\obj\Debug\net6.0\E-Wallet.Core.dll
+C:\Projects\E-Wallet_Backend\E-Wallet\E-Wallet.Core\obj\Debug\net6.0\refint\E-Wallet.Core.dll
+C:\Projects\E-Wallet_Backend\E-Wallet\E-Wallet.Core\obj\Debug\net6.0\E-Wallet.Core.pdb
+C:\Projects\E-Wallet_Backend\E-Wallet\E-Wallet.Core\obj\Debug\net6.0\ref\E-Wallet.Core.dll
+C:\Projects\E-Wallet_Backend\E-Wallet\E-Wallet.Core\bin\Debug\net6.0\E-Wallet.Core.runtimeconfig.json
+C:\Projects\E-Wallet_Backend\E-Wallet\E-Wallet.Core\obj\Debug\net6.0\E-Wallet.Core.genruntimeconfig.cache

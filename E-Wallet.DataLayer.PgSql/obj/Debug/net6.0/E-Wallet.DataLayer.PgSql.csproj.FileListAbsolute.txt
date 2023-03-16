@@ -1,0 +1,17 @@
+C:\Projects\E-Wallet_Backend\E-Wallet\E-Wallet.DataLayer.PgSql\bin\Debug\net6.0\E-Wallet.DataLayer.PgSql.deps.json
+C:\Projects\E-Wallet_Backend\E-Wallet\E-Wallet.DataLayer.PgSql\bin\Debug\net6.0\E-Wallet.DataLayer.PgSql.dll
+C:\Projects\E-Wallet_Backend\E-Wallet\E-Wallet.DataLayer.PgSql\bin\Debug\net6.0\E-Wallet.DataLayer.PgSql.pdb
+C:\Projects\E-Wallet_Backend\E-Wallet\E-Wallet.DataLayer.PgSql\bin\Debug\net6.0\E-Wallet.DataLayer.dll
+C:\Projects\E-Wallet_Backend\E-Wallet\E-Wallet.DataLayer.PgSql\bin\Debug\net6.0\E-Wallet.DataLayer.pdb
+C:\Projects\E-Wallet_Backend\E-Wallet\E-Wallet.DataLayer.PgSql\obj\Debug\net6.0\E-Wallet.DataLayer.PgSql.csproj.AssemblyReference.cache
+C:\Projects\E-Wallet_Backend\E-Wallet\E-Wallet.DataLayer.PgSql\obj\Debug\net6.0\E-Wallet.DataLayer.PgSql.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projects\E-Wallet_Backend\E-Wallet\E-Wallet.DataLayer.PgSql\obj\Debug\net6.0\E-Wallet.DataLayer.PgSql.AssemblyInfoInputs.cache
+C:\Projects\E-Wallet_Backend\E-Wallet\E-Wallet.DataLayer.PgSql\obj\Debug\net6.0\E-Wallet.DataLayer.PgSql.AssemblyInfo.cs
+C:\Projects\E-Wallet_Backend\E-Wallet\E-Wallet.DataLayer.PgSql\obj\Debug\net6.0\E-Wallet.DataLayer.PgSql.csproj.CoreCompileInputs.cache
+C:\Projects\E-Wallet_Backend\E-Wallet\E-Wallet.DataLayer.PgSql\obj\Debug\net6.0\E-Wallet.DataLayer.PgSql.csproj.CopyComplete
+C:\Projects\E-Wallet_Backend\E-Wallet\E-Wallet.DataLayer.PgSql\obj\Debug\net6.0\E-Wallet.DataLayer.PgSql.dll
+C:\Projects\E-Wallet_Backend\E-Wallet\E-Wallet.DataLayer.PgSql\obj\Debug\net6.0\refint\E-Wallet.DataLayer.PgSql.dll
+C:\Projects\E-Wallet_Backend\E-Wallet\E-Wallet.DataLayer.PgSql\obj\Debug\net6.0\E-Wallet.DataLayer.PgSql.pdb
+C:\Projects\E-Wallet_Backend\E-Wallet\E-Wallet.DataLayer.PgSql\obj\Debug\net6.0\ref\E-Wallet.DataLayer.PgSql.dll
+C:\Projects\E-Wallet_Backend\E-Wallet\E-Wallet.DataLayer.PgSql\bin\Debug\net6.0\E-Wallet.DataLayer.PgSql.runtimeconfig.json
+C:\Projects\E-Wallet_Backend\E-Wallet\E-Wallet.DataLayer.PgSql\obj\Debug\net6.0\E-Wallet.DataLayer.PgSql.genruntimeconfig.cache
