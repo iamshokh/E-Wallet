@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\E-Wallet.WebApi.props" />
+</Project>

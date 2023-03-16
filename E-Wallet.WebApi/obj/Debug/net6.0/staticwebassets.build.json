@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "fOkcV+L5iRubo5+MZgTCPAlJQhQIW7fiNey3MDqBQcE=",
+  "Source": "E-Wallet.WebApi",
+  "BasePath": "_content/E-Wallet.WebApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
