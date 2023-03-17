@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using E_Wallet.DataLayer.EfClasses;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,5 +15,11 @@ namespace E_Wallet.DataLayer.EfCode
         {
            
         }
+
+        public virtual DbSet<State> States { get; set; }
+        public virtual DbSet<E_Wallet.DataLayer.EfClasses.Type> Types { get; set; }
+        public virtual DbSet<EWallet> EWallets { get; set; }
+        public virtual DbSet<EWalletTransaction> EWalletTransactions { get; set; }
+        public virtual DbSet<User> Users { get; set; }
     }
 }

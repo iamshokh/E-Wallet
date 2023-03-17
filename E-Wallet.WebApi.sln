@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33122.133
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "E-Wallet.WebApi", "E-Wallet.WebApi\E-Wallet.WebApi.csproj", "{6A75E73C-06CF-45A6-9EAD-737722F08CA2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "E-Wallet.WebApi", "E-Wallet.WebApi\E-Wallet.WebApi.csproj", "{6A75E73C-06CF-45A6-9EAD-737722F08CA2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "E-Wallet.DataLayer.PgSql", "E-Wallet.DataLayer.PgSql\E-Wallet.DataLayer.PgSql.csproj", "{A9143188-370B-44DF-A374-08BEB0E354D6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "E-Wallet.DataLayer.PgSql", "E-Wallet.DataLayer.PgSql\E-Wallet.DataLayer.PgSql.csproj", "{A9143188-370B-44DF-A374-08BEB0E354D6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "E-Wallet.Core", "E-Wallet.Core\E-Wallet.Core.csproj", "{0C64C917-1351-4EC5-B488-71A8DD3CA1B2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "E-Wallet.Core", "E-Wallet.Core\E-Wallet.Core.csproj", "{0C64C917-1351-4EC5-B488-71A8DD3CA1B2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "E-Wallet.DataLayer", "E-Wallet.DataLayer\E-Wallet.DataLayer.csproj", "{2A940992-F669-4087-BCBA-C173A20FADE7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "E-Wallet.DataLayer", "E-Wallet.DataLayer\E-Wallet.DataLayer.csproj", "{2A940992-F669-4087-BCBA-C173A20FADE7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "E-Wallet.DigestAuth", "E-Wallet.DigestAuth\E-Wallet.DigestAuth.csproj", "{4CB4742A-FBBF-477E-A2D8-D712B71FD47A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{2A940992-F669-4087-BCBA-C173A20FADE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2A940992-F669-4087-BCBA-C173A20FADE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2A940992-F669-4087-BCBA-C173A20FADE7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4CB4742A-FBBF-477E-A2D8-D712B71FD47A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4CB4742A-FBBF-477E-A2D8-D712B71FD47A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4CB4742A-FBBF-477E-A2D8-D712B71FD47A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4CB4742A-FBBF-477E-A2D8-D712B71FD47A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
