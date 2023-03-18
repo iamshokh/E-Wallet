@@ -3,6 +3,7 @@ using E_Wallet.DataLayer.EfClasses;
 using E_Wallet.DataLayer.EfCode;
 using E_Wallet.DataLayer.Repositories;
 using E_Wallet.DataLayer.Repositories.EWalletTransaction;
+using Microsoft.EntityFrameworkCore;
 using StatusGeneric;
 using System;
 using System.Collections.Generic;
@@ -87,19 +88,23 @@ namespace E_Wallet.BizLogicLayer.EWalletServices
                 return null;
             }
 
-            var eWalletTransactions = _context.EWalletTransactions.Where(a => a.EWalletId == eWallet.Id);
+            var eWalletTransactions = _context.EWalletTransactions.Where(a => a.EWalletId == eWallet.Id).ToList();
             var eWalletTransactionsDto = new List<EWalletTransactionDto>();
             foreach (var transaction in eWalletTransactions)
             {
-
+                eWalletTransactionsDto.Add(new EWalletTransactionDto
+                {
+                    Amount = transaction.Amount,
+                    State =_context.States.FirstOrDefault(a => a.Id == transaction.StateId).FullName,
+                    DirectionType = _context.DirectionTypes.FirstOrDefault(a => a.Id == transaction.DirectionTypeId).FullName
+                });
             }
-
             var result = new EWalletDto()
             {
                 AccountNumber = eWallet.AccountNumber,
                 Balance = eWallet.Balance,
                 User = eWallet.User.UserName,
-                EWalletTransactions = new List<EWalletTransactionDto>()
+                EWalletTransactions = eWalletTransactionsDto
             };
 
             return result;

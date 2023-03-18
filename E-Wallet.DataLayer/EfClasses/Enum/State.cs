@@ -37,7 +37,7 @@ namespace E_Wallet.DataLayer.EfClasses
         public DateTime CreatedDate { get; set; }
 
         [InverseProperty(nameof(EWalletTransaction.State))]
-        public virtual ICollection<EWalletTransaction> EWalletTransactions { get; } = new List<EWalletTransaction>();
+        public virtual ICollection<EWalletTransaction> EWalletTransactions { get; set; }
 
         [InverseProperty(nameof(EWallet.State))]
         public virtual ICollection<EWallet> EWallets { get; } = new List<EWallet>();

@@ -34,5 +34,22 @@ namespace E_Wallet.WebApi.Controllers
 
             return ValidationProblem(ModelState);
         }
+
+        [HttpPost]
+        public IActionResult MonthlyOperations(int userId, string digest)
+        {
+            if (ModelState.IsValid)
+            {
+                var result = _service.MonthlyOperations(userId, digest);
+
+                if (_service.IsValid)
+                {
+                    return Ok(result);
+                }
+                //_service.CopyErrorsToModelState(ModelState);
+            }
+
+            return ValidationProblem(ModelState);
+        }
     }
 }

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace E_Wallet.DataLayer.EfClasses
 {
-    [Table("enum_type")]
+    [Table("enum_direction_type")]
     public partial class DirectionType
     {
         public DirectionType()
@@ -35,7 +35,7 @@ namespace E_Wallet.DataLayer.EfClasses
         [Column("created_date", TypeName = "timestamp without time zone")]
         public DateTime CreatedDate { get; set; }
 
-        [InverseProperty(nameof(EWalletTransaction.Type))]
+        [InverseProperty(nameof(EWalletTransaction.DirectionType))]
         public virtual ICollection<EWalletTransaction> EWalletTransactions { get; } = new List<EWalletTransaction>();
     }
 }

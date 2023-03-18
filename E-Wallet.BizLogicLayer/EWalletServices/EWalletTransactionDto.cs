@@ -10,7 +10,7 @@ namespace E_Wallet.BizLogicLayer.EWalletServices
     public class EWalletTransactionDto
     {
         public decimal Amount { get; set; }
-        public string Type { get; set; }
+        public string DirectionType { get; set; }
         public string State { get; set; }
     }
 }

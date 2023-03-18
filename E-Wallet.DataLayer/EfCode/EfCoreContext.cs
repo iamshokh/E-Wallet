@@ -17,7 +17,7 @@ namespace E_Wallet.DataLayer.EfCode
         }
 
         public virtual DbSet<State> States { get; set; }
-        public virtual DbSet<DirectionType> Types { get; set; }
+        public virtual DbSet<DirectionType> DirectionTypes { get; set; }
         public virtual DbSet<EWallet> EWallets { get; set; }
         public virtual DbSet<EWalletTransaction> EWalletTransactions { get; set; }
         public virtual DbSet<User> Users { get; set; }
