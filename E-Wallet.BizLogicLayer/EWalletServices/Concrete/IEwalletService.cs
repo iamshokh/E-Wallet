@@ -11,7 +11,7 @@ namespace E_Wallet.BizLogicLayer.EWalletServices
     public interface IEwalletService : IStatusGeneric
     {
         UserDto AccountExists(int userId, string digest);
-        Task<string> ReplenishWallet(EWalletTransactionDlDto dto, int userId, string digest);
+        Task<string> ReplenishWallet(ReplenishWalletRequestDto dto);
         EWalletDto MonthlyOperations(int userId, string digest);
         decimal GetBalance(int userId, string digest);
     }

@@ -7,7 +7,8 @@ using System.Threading.Tasks;
 
 namespace E_Wallet.DataLayer.EfCode
 {
-    public class CommandContext<T> : ICommandContext<T> where T : class
+    public class CommandContext<T> : 
+        ICommandContext<T> where T : class
     {
         private EfCoreContext _context = null;
         private DbSet<T> table = null;
@@ -18,9 +19,8 @@ namespace E_Wallet.DataLayer.EfCode
         }
 
         public void Create(T obj)
-        {
-            table.Add(obj);
-        }
+            => table.Add(obj);
+        
         public void Update(T obj)
         {
             table.Attach(obj);
@@ -32,8 +32,6 @@ namespace E_Wallet.DataLayer.EfCode
             table.Remove(existing);
         }
         public void Save()
-        {
-            _context.SaveChanges();
-        }
+            => _context.SaveChanges();
     }
 }

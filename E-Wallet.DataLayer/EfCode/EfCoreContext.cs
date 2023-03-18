@@ -8,7 +8,8 @@ using System.Threading.Tasks;
 
 namespace E_Wallet.DataLayer.EfCode
 {
-    public class EfCoreContext : DbContext
+    public class EfCoreContext :
+        DbContext
     {
         public EfCoreContext(DbContextOptions options)
             : base(options)

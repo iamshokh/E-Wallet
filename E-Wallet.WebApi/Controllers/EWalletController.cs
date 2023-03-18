@@ -1,13 +1,10 @@
 ﻿using E_Wallet.BizLogicLayer.EWalletServices;
-using E_Wallet.BizLogicLayer.UserAccountServices;
-using E_Wallet.DataLayer.Repositories;
-using E_Wallet.DataLayer.Repositories.EWalletTransaction;
-using E_Wallet.DataLayer.Repositories.UserAccount;
-using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace E_Wallet.WebApi.Controllers
 {
+    [Authorize(Roles = "Admin")]
     [Route("[controller]/[action]")]
     [ApiController]
     public class EWalletController : ControllerBase
@@ -19,11 +16,11 @@ namespace E_Wallet.WebApi.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> ReplanishBalance([FromBody] EWalletTransactionDlDto dto,int userId, string digest)
+        public async Task<IActionResult> ReplanishBalance([FromBody] ReplenishWalletRequestDto dto)
         {
             if (ModelState.IsValid)
             {
-                var result = await _service.ReplenishWallet(dto, userId, digest);
+                var result = await _service.ReplenishWallet(dto);
 
                 if (_service.IsValid)
                 {

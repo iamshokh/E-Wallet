@@ -1,6 +1,6 @@
 ﻿namespace E_Wallet.Core
 {
-    public class StateIdconst
+    public class StateIdConst
     {
         /// <summary>
         /// Актив

@@ -16,14 +16,17 @@ namespace E_Wallet.Core.Security
         public static string GenerateSalt()
         {
             byte[] salt = new byte[SaltSize];
+
             using (var rng = new RNGCryptoServiceProvider())
             {
                 rng.GetBytes(salt);
             }
+
             return Convert.ToBase64String(salt);
         }
 
-        public static string GenerateHash(string password, string salt)
+        public static string GenerateHash(string password,
+                                          string salt)
         {
             byte[] saltBytes = Convert.FromBase64String(salt);
             byte[] passwordBytes = Encoding.UTF8.GetBytes(password);
@@ -32,18 +35,25 @@ namespace E_Wallet.Core.Security
             {
                 byte[] hashBytes = pbkdf2.GetBytes(HashSize);
                 byte[] resultBytes = new byte[SaltSize + HashSize];
+
                 Buffer.BlockCopy(saltBytes, 0, resultBytes, 0, SaltSize);
                 Buffer.BlockCopy(hashBytes, 0, resultBytes, SaltSize, HashSize);
+                
                 return Convert.ToBase64String(resultBytes);
             }
         }
 
-        public static bool VerifyPassword(string password, string hash)
+        public static bool VerifyPassword(string password,
+                                          string hash)
         {
             byte[] hashBytes = Convert.FromBase64String(hash);
             byte[] saltBytes = new byte[SaltSize];
+
             Buffer.BlockCopy(hashBytes, 0, saltBytes, 0, SaltSize);
-            string expectedHash = GenerateHash(password, Convert.ToBase64String(saltBytes));
+
+            string expectedHash = GenerateHash(password: password,
+                                               salt: Convert.ToBase64String(saltBytes));
+            
             return hash == expectedHash;
         }
     }

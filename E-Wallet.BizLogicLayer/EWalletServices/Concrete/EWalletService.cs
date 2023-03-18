@@ -43,30 +43,30 @@ namespace E_Wallet.BizLogicLayer.EWalletServices
             return result;
         }
 
-        public async Task<string> ReplenishWallet(EWalletTransactionDlDto dto, int userId, string digest)
+        public async Task<string> ReplenishWallet(ReplenishWalletRequestDto dto)
         {
-            var eWallet = _context.EWallets.FirstOrDefault(a => a.UserId == userId);
+            var eWallet = _context.EWallets.FirstOrDefault(a => a.UserId == dto.UserId);
             if (eWallet == null)
             {
                 return new Exception("Не сущществует такого пользователя").Message;
             }
-            var user = _context.Users.FirstOrDefault(a => a.Id == userId);
-            if (!eWallet.User.IsIdentificate && eWallet.Balance + dto.Amount > 10000)
+            var user = _context.Users.FirstOrDefault(a => a.Id == dto.UserId);
+            if (!eWallet.User.IsIdentificate && eWallet.Balance + dto.RequestDto.Amount > 10000)
             {
                 return new Exception("Максимальный баланс для неидентифицированного счета составляет 10000 сомони.").Message;
             }
 
-            if (eWallet.User.IsIdentificate && eWallet.Balance + dto.Amount > 100000)
+            if (eWallet.User.IsIdentificate && eWallet.Balance + dto.RequestDto.Amount > 100000)
             {
                 return new Exception("Максимальный остаток на идентифицированном счете составляет 100 000 сомони.").Message;
             }
 
-            eWallet.Balance += dto.Amount;
+            eWallet.Balance += dto.RequestDto.Amount;
             var result = new EWalletTransaction
             {
-                Amount = dto.Amount,
+                Amount = dto.RequestDto.Amount,
                 EWalletId = eWallet.Id,
-                StateId = StateIdconst.ACTIVE,
+                StateId = StateIdConst.ACTIVE,
                 DirectionTypeId = DirectionTypeIdConst.REPLENISHMENT
             };
 

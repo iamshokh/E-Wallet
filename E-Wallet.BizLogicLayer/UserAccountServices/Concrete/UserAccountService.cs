@@ -43,7 +43,7 @@ namespace E_Wallet.BizLogicLayer.UserAccountServices
             var eWallet = new EWallet()
             {
                 AccountNumber = "8600" + number,
-                StateId = StateIdconst.ACTIVE,
+                StateId = StateIdConst.ACTIVE,
                 Balance = 0m,
                 User = user
             };

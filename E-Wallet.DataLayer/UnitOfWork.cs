@@ -9,10 +9,9 @@ using System.Threading.Tasks;
 
 namespace E_Wallet.DataLayer
 {
-    public class UnitOfWork : IUnitOfWork
+    public class UnitOfWork : 
+        IUnitOfWork
     {
-
-
         private readonly EfCoreContext _context;
         public UnitOfWork(EfCoreContext context)
         {
@@ -23,12 +22,9 @@ namespace E_Wallet.DataLayer
         public IUserAccountRepository UserAccounts { get; private set; }
 
         public int Complete()
-        {
-            return _context.SaveChanges();
-        }
+            => _context.SaveChanges();
+        
         public void Dispose()
-        {
-            _context.Dispose();
-        }
+            => _context.Dispose();
     }
 }

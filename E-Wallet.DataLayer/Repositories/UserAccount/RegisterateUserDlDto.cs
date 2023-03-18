@@ -15,8 +15,12 @@ namespace E_Wallet.DataLayer.Repositories.UserAccount
         public string UserName { get; set; } = null!;
         [Required]
         [StringLength(250)]
+        [DataType(DataType.Password)]
+        [RegularExpression(@"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$",
+        ErrorMessage = "Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, one digit, and one special character.")]
         public string Password { get; set; } = null!;
         [StringLength(250)]
+        [DataType(DataType.EmailAddress)]
         public string? Email { get; set; }
         [StringLength(50)]
         public string? PhoneNumber { get; set; }

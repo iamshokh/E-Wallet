@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace E_Wallet.Core.Security.AuthService
+namespace E_Wallet.DigestAuth.AuthenticationServices
 {
-    internal interface IAuthService
+    public interface IAuthenticationService
     {
     }
 }

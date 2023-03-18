@@ -93,3 +93,11 @@ C:\Projects\E-Wallet_Backend\E-Wallet\E-Wallet.WebApi\bin\Debug\net6.0\StatusGen
 C:\Projects\E-Wallet_Backend\E-Wallet\E-Wallet.WebApi\bin\Debug\net6.0\E-Wallet.BizLogicLayer.dll
 C:\Projects\E-Wallet_Backend\E-Wallet\E-Wallet.WebApi\bin\Debug\net6.0\E-Wallet.BizLogicLayer.pdb
 C:\Projects\E-Wallet_Backend\E-Wallet\E-Wallet.WebApi\obj\Debug\net6.0\E-Wallet.WebApi.MvcApplicationPartsAssemblyInfo.cs
+C:\Projects\E-Wallet_Backend\E-Wallet\E-Wallet.WebApi\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Projects\E-Wallet_Backend\E-Wallet\E-Wallet.WebApi\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Projects\E-Wallet_Backend\E-Wallet\E-Wallet.WebApi\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+C:\Projects\E-Wallet_Backend\E-Wallet\E-Wallet.WebApi\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+C:\Projects\E-Wallet_Backend\E-Wallet\E-Wallet.WebApi\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Projects\E-Wallet_Backend\E-Wallet\E-Wallet.WebApi\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+C:\Projects\E-Wallet_Backend\E-Wallet\E-Wallet.WebApi\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Projects\E-Wallet_Backend\E-Wallet\E-Wallet.WebApi\bin\Debug\net6.0\Newtonsoft.Json.dll
