@@ -7,4 +7,10 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+	<PackageReference Include="GenericServices.StatusGeneric" Version="1.1.0" />
+	<PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
+    <ProjectReference Include="..\E-Wallet.DataLayer\E-Wallet.DataLayer.csproj" />
+  </ItemGroup>
+
 </Project>

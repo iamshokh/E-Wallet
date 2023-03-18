@@ -6,5 +6,10 @@ namespace E_Wallet.WebApi
     {
         public static AppSettings Instance { get; private set; }
         public DatabaseConfig Database { get; set; }
+
+        public static void Init(AppSettings instance)
+        {
+            Instance = instance;
+        }
     }
 }

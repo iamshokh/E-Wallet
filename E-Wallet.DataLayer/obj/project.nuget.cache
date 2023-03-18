@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "bPCDSLyJmPOID3V6AxA92ULMHYK1Uai6MgUUz7HoTE0wMwCJuo4wJOgdYheF8m8k6d7g3PJsr08yPN3WBmgAoA==",
+  "dgSpecHash": "9/bihhyvyBVCAlEYvXjfs8diCMVotMwbWnMf6iPGrMlk0YxyuS/j3yt/MXMEoTXKETBvjBEuNPbg8XcOS1Rdiw==",
   "success": true,
   "projectFilePath": "C:\\Projects\\E-Wallet_Backend\\E-Wallet\\E-Wallet.DataLayer\\E-Wallet.DataLayer.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\User\\.nuget\\packages\\genericservices.statusgeneric\\1.1.0\\genericservices.statusgeneric.1.1.0.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.4\\microsoft.entityframeworkcore.7.0.4.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\7.0.4\\microsoft.entityframeworkcore.abstractions.7.0.4.nupkg.sha512",
@@ -23,6 +24,7 @@
     "C:\\Users\\User\\.nuget\\packages\\microsoft.extensions.primitives\\7.0.0\\microsoft.extensions.primitives.7.0.0.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\mono.texttemplating\\2.2.1\\mono.texttemplating.2.2.1.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\system.codedom\\4.4.0\\system.codedom.4.4.0.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\system.componentmodel.annotations\\4.6.0\\system.componentmodel.annotations.4.6.0.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\system.text.encodings.web\\7.0.0\\system.text.encodings.web.7.0.0.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\system.text.json\\7.0.0\\system.text.json.7.0.0.nupkg.sha512"

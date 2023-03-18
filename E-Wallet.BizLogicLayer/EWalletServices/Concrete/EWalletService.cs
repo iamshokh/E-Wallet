@@ -9,6 +9,15 @@ namespace E_Wallet.BizLogicLayer.EWalletServices
 {
     public class EWalletService : IEwalletService
     {
-        public readonly ICommandContext
+        //public readonly ICommandContext _context;
+        //public EWalletService(ICommandContext context)
+        //{
+        //    _context = context;
+        //}
+
+        //public bool ReplenishWallet(decimal amount)
+        //{
+
+        //}
     }
 }

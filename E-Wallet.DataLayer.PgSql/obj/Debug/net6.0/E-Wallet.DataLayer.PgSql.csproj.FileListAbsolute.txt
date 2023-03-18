@@ -15,3 +15,5 @@ C:\Projects\E-Wallet_Backend\E-Wallet\E-Wallet.DataLayer.PgSql\obj\Debug\net6.0\
 C:\Projects\E-Wallet_Backend\E-Wallet\E-Wallet.DataLayer.PgSql\obj\Debug\net6.0\ref\E-Wallet.DataLayer.PgSql.dll
 C:\Projects\E-Wallet_Backend\E-Wallet\E-Wallet.DataLayer.PgSql\bin\Debug\net6.0\E-Wallet.DataLayer.PgSql.runtimeconfig.json
 C:\Projects\E-Wallet_Backend\E-Wallet\E-Wallet.DataLayer.PgSql\obj\Debug\net6.0\E-Wallet.DataLayer.PgSql.genruntimeconfig.cache
+C:\Projects\E-Wallet_Backend\E-Wallet\E-Wallet.DataLayer.PgSql\bin\Debug\net6.0\E-Wallet.Core.dll
+C:\Projects\E-Wallet_Backend\E-Wallet\E-Wallet.DataLayer.PgSql\bin\Debug\net6.0\E-Wallet.Core.pdb

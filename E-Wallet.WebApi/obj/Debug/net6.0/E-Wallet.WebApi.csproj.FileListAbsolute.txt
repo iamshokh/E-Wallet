@@ -46,7 +46,6 @@ C:\Projects\E-Wallet_Backend\E-Wallet\E-Wallet.WebApi\obj\Debug\net6.0\E-Wallet.
 C:\Projects\E-Wallet_Backend\E-Wallet\E-Wallet.WebApi\obj\Debug\net6.0\E-Wallet.WebApi.AssemblyInfoInputs.cache
 C:\Projects\E-Wallet_Backend\E-Wallet\E-Wallet.WebApi\obj\Debug\net6.0\E-Wallet.WebApi.AssemblyInfo.cs
 C:\Projects\E-Wallet_Backend\E-Wallet\E-Wallet.WebApi\obj\Debug\net6.0\E-Wallet.WebApi.csproj.CoreCompileInputs.cache
-C:\Projects\E-Wallet_Backend\E-Wallet\E-Wallet.WebApi\obj\Debug\net6.0\E-Wallet.WebApi.MvcApplicationPartsAssemblyInfo.cs
 C:\Projects\E-Wallet_Backend\E-Wallet\E-Wallet.WebApi\obj\Debug\net6.0\E-Wallet.WebApi.MvcApplicationPartsAssemblyInfo.cache
 C:\Projects\E-Wallet_Backend\E-Wallet\E-Wallet.WebApi\obj\Debug\net6.0\staticwebassets\msbuild.E-Wallet.WebApi.Microsoft.AspNetCore.StaticWebAssets.props
 C:\Projects\E-Wallet_Backend\E-Wallet\E-Wallet.WebApi\obj\Debug\net6.0\staticwebassets\msbuild.build.E-Wallet.WebApi.props
@@ -90,3 +89,6 @@ C:\Projects\E-Wallet_Backend\E-Wallet\E-Wallet.WebApi\bin\Debug\net6.0\System.Co
 C:\Projects\E-Wallet_Backend\E-Wallet\E-Wallet.WebApi\bin\Debug\net6.0\System.Text.Encodings.Web.dll
 C:\Projects\E-Wallet_Backend\E-Wallet\E-Wallet.WebApi\bin\Debug\net6.0\System.Text.Json.dll
 C:\Projects\E-Wallet_Backend\E-Wallet\E-Wallet.WebApi\bin\Debug\net6.0\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
+C:\Projects\E-Wallet_Backend\E-Wallet\E-Wallet.WebApi\bin\Debug\net6.0\StatusGeneric.dll
+C:\Projects\E-Wallet_Backend\E-Wallet\E-Wallet.WebApi\bin\Debug\net6.0\E-Wallet.BizLogicLayer.dll
+C:\Projects\E-Wallet_Backend\E-Wallet\E-Wallet.WebApi\bin\Debug\net6.0\E-Wallet.BizLogicLayer.pdb

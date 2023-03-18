@@ -20,8 +20,8 @@ public partial class EWalletTransaction
     [Precision(18, 2)]
     public decimal Amount { get; set; }
 
-    [Column("type_id")]
-    public int TypeId { get; set; }
+    [Column("direction_type_id")]
+    public int DirectionTypeId { get; set; }
 
     [Column("state_id")]
     public int StateId { get; set; }
@@ -38,6 +38,10 @@ public partial class EWalletTransaction
     [Column("modified_user_id")]
     public int? ModifiedUserId { get; set; }
 
+    [ForeignKey("DirectionTypeId")]
+    [InverseProperty("EWalletTransactions")]
+    public virtual EnumDirectionType DirectionType { get; set; } = null!;
+
     [ForeignKey("EWalletId")]
     [InverseProperty("EWalletTransactions")]
     public virtual EWallet EWallet { get; set; } = null!;
@@ -45,8 +49,4 @@ public partial class EWalletTransaction
     [ForeignKey("StateId")]
     [InverseProperty("EWalletTransactions")]
     public virtual EnumState State { get; set; } = null!;
-
-    [ForeignKey("TypeId")]
-    [InverseProperty("EWalletTransactions")]
-    public virtual EnumType Type { get; set; } = null!;
 }

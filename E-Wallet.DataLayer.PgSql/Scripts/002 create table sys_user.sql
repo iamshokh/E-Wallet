@@ -2,8 +2,8 @@ create table sys_user
 (
 	id						serial not null primary key,
 	user_name				varchar(250) not null,
-	digest_hash			    varchar(250) not null,
-	digest_signature	    varchar(250) not null,
+	password_hash			varchar(250) NOT NULL,
+	password_salt			varchar(250) NOT NULL,
 	email					varchar(250),
 	phone_number			varchar(50),
  	shortname      			varchar(260) NOT NULL,

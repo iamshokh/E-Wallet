@@ -1,0 +1,17 @@
+C:\Projects\E-Wallet_Backend\E-Wallet\E-Wallet.BizLogicLayer\obj\Debug\net6.0\E-Wallet.BizLogicLayer.csproj.AssemblyReference.cache
+C:\Projects\E-Wallet_Backend\E-Wallet\E-Wallet.BizLogicLayer\obj\Debug\net6.0\E-Wallet.BizLogicLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projects\E-Wallet_Backend\E-Wallet\E-Wallet.BizLogicLayer\obj\Debug\net6.0\E-Wallet.BizLogicLayer.AssemblyInfoInputs.cache
+C:\Projects\E-Wallet_Backend\E-Wallet\E-Wallet.BizLogicLayer\obj\Debug\net6.0\E-Wallet.BizLogicLayer.AssemblyInfo.cs
+C:\Projects\E-Wallet_Backend\E-Wallet\E-Wallet.BizLogicLayer\obj\Debug\net6.0\E-Wallet.BizLogicLayer.csproj.CoreCompileInputs.cache
+C:\Projects\E-Wallet_Backend\E-Wallet\E-Wallet.BizLogicLayer\bin\Debug\net6.0\E-Wallet.BizLogicLayer.deps.json
+C:\Projects\E-Wallet_Backend\E-Wallet\E-Wallet.BizLogicLayer\bin\Debug\net6.0\E-Wallet.BizLogicLayer.dll
+C:\Projects\E-Wallet_Backend\E-Wallet\E-Wallet.BizLogicLayer\bin\Debug\net6.0\E-Wallet.BizLogicLayer.pdb
+C:\Projects\E-Wallet_Backend\E-Wallet\E-Wallet.BizLogicLayer\bin\Debug\net6.0\E-Wallet.Core.dll
+C:\Projects\E-Wallet_Backend\E-Wallet\E-Wallet.BizLogicLayer\bin\Debug\net6.0\E-Wallet.DataLayer.dll
+C:\Projects\E-Wallet_Backend\E-Wallet\E-Wallet.BizLogicLayer\bin\Debug\net6.0\E-Wallet.DataLayer.pdb
+C:\Projects\E-Wallet_Backend\E-Wallet\E-Wallet.BizLogicLayer\bin\Debug\net6.0\E-Wallet.Core.pdb
+C:\Projects\E-Wallet_Backend\E-Wallet\E-Wallet.BizLogicLayer\obj\Debug\net6.0\E-Wallet.BizLogicLayer.csproj.CopyComplete
+C:\Projects\E-Wallet_Backend\E-Wallet\E-Wallet.BizLogicLayer\obj\Debug\net6.0\E-Wallet.BizLogicLayer.dll
+C:\Projects\E-Wallet_Backend\E-Wallet\E-Wallet.BizLogicLayer\obj\Debug\net6.0\refint\E-Wallet.BizLogicLayer.dll
+C:\Projects\E-Wallet_Backend\E-Wallet\E-Wallet.BizLogicLayer\obj\Debug\net6.0\E-Wallet.BizLogicLayer.pdb
+C:\Projects\E-Wallet_Backend\E-Wallet\E-Wallet.BizLogicLayer\obj\Debug\net6.0\ref\E-Wallet.BizLogicLayer.dll

@@ -12,3 +12,6 @@ C:\Projects\E-Wallet_Backend\E-Wallet\E-Wallet.DataLayer\obj\Debug\net6.0\E-Wall
 C:\Projects\E-Wallet_Backend\E-Wallet\E-Wallet.DataLayer\obj\Debug\net6.0\ref\E-Wallet.DataLayer.dll
 C:\Projects\E-Wallet_Backend\E-Wallet\E-Wallet.DataLayer\bin\Debug\net6.0\E-Wallet.DataLayer.runtimeconfig.json
 C:\Projects\E-Wallet_Backend\E-Wallet\E-Wallet.DataLayer\obj\Debug\net6.0\E-Wallet.DataLayer.genruntimeconfig.cache
+C:\Projects\E-Wallet_Backend\E-Wallet\E-Wallet.DataLayer\bin\Debug\net6.0\E-Wallet.Core.dll
+C:\Projects\E-Wallet_Backend\E-Wallet\E-Wallet.DataLayer\bin\Debug\net6.0\E-Wallet.Core.pdb
+C:\Projects\E-Wallet_Backend\E-Wallet\E-Wallet.DataLayer\obj\Debug\net6.0\E-Wallet.DataLayer.csproj.CopyComplete

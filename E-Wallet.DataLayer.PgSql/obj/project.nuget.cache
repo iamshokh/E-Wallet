@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "oFgOJoAfrejbq77mIvECC22OwBce9S77ShmGi8W1SEaKkSaiBpb4vSsu00hD2/Z4ezmvsxIgHowBt2azP99L7A==",
+  "dgSpecHash": "YRRCHJS7y4tKn2pam0xrARmb/9h+/TPeu8LwKBjwbrET7YSAZbEmgvu23OFU/0bXjasz+/tEZf5Fc3j5s8ttGA==",
   "success": true,
   "projectFilePath": "C:\\Projects\\E-Wallet_Backend\\E-Wallet\\E-Wallet.DataLayer.PgSql\\E-Wallet.DataLayer.PgSql.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\User\\.nuget\\packages\\genericservices.statusgeneric\\1.1.0\\genericservices.statusgeneric.1.1.0.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.4\\microsoft.entityframeworkcore.7.0.4.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\7.0.4\\microsoft.entityframeworkcore.abstractions.7.0.4.nupkg.sha512",
@@ -25,6 +26,7 @@
     "C:\\Users\\User\\.nuget\\packages\\npgsql\\7.0.2\\npgsql.7.0.2.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\npgsql.entityframeworkcore.postgresql\\7.0.3\\npgsql.entityframeworkcore.postgresql.7.0.3.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\system.codedom\\4.4.0\\system.codedom.4.4.0.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\system.componentmodel.annotations\\4.6.0\\system.componentmodel.annotations.4.6.0.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\system.text.encodings.web\\7.0.0\\system.text.encodings.web.7.0.0.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\system.text.json\\7.0.0\\system.text.json.7.0.0.nupkg.sha512"

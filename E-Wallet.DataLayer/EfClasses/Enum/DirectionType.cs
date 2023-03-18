@@ -10,9 +10,9 @@ using System.Threading.Tasks;
 namespace E_Wallet.DataLayer.EfClasses
 {
     [Table("enum_type")]
-    public partial class Type
+    public partial class DirectionType
     {
-        public Type()
+        public DirectionType()
         {
             EWalletTransactions = new HashSet<EWalletTransaction>();
         }

@@ -16,6 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\E-Wallet.BizLogicLayer\E-Wallet.BizLogicLayer.csproj" />
     <ProjectReference Include="..\E-Wallet.Core\E-Wallet.Core.csproj" />
     <ProjectReference Include="..\E-Wallet.DataLayer.PgSql\E-Wallet.DataLayer.PgSql.csproj" />
   </ItemGroup>

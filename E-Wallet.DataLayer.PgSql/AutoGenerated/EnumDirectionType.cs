@@ -6,8 +6,8 @@ using Microsoft.EntityFrameworkCore;
 
 namespace E_Wallet.DataLayer.PgSql;
 
-[Table("enum_type")]
-public partial class EnumType
+[Table("enum_direction_type")]
+public partial class EnumDirectionType
 {
     [Key]
     [Column("id")]
@@ -28,6 +28,6 @@ public partial class EnumType
     [Column("created_date", TypeName = "timestamp without time zone")]
     public DateTime CreatedDate { get; set; }
 
-    [InverseProperty("Type")]
+    [InverseProperty("DirectionType")]
     public virtual ICollection<EWalletTransaction> EWalletTransactions { get; } = new List<EWalletTransaction>();
 }

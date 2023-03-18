@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v6.0": {
       "E-Wallet.WebApi/1.0.0": {
         "dependencies": {
+          "E-Wallet.BizLogicLayer": "1.0.0",
           "E-Wallet.Core": "1.0.0",
           "E-Wallet.DataLayer.PgSql": "1.0.0",
           "Microsoft.EntityFrameworkCore.Tools": "7.0.4",
@@ -17,12 +18,34 @@
           "E-Wallet.WebApi.dll": {}
         }
       },
+      "GenericServices.StatusGeneric/1.1.0": {
+        "dependencies": {
+          "System.ComponentModel.Annotations": "4.6.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/StatusGeneric.dll": {
+            "assemblyVersion": "1.1.0.0",
+            "fileVersion": "1.1.0.0"
+          }
+        }
+      },
       "Humanizer.Core/2.14.1": {
         "runtime": {
           "lib/net6.0/Humanizer.dll": {
             "assemblyVersion": "2.14.0.0",
             "fileVersion": "2.14.1.48190"
           }
+        }
+      },
+      "Microsoft.AspNetCore.Http.Abstractions/2.2.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Http.Features": "2.2.0",
+          "System.Text.Encodings.Web": "7.0.0"
+        }
+      },
+      "Microsoft.AspNetCore.Http.Features/2.2.0": {
+        "dependencies": {
+          "Microsoft.Extensions.Primitives": "7.0.0"
         }
       },
       "Microsoft.EntityFrameworkCore/7.0.4": {
@@ -285,6 +308,7 @@
           }
         }
       },
+      "System.ComponentModel.Annotations/4.6.0": {},
       "System.Runtime.CompilerServices.Unsafe/6.0.0": {},
       "System.Text.Encodings.Web/7.0.0": {
         "dependencies": {
@@ -317,6 +341,16 @@
           }
         }
       },
+      "E-Wallet.BizLogicLayer/1.0.0": {
+        "dependencies": {
+          "E-Wallet.DataLayer": "1.0.0",
+          "GenericServices.StatusGeneric": "1.1.0",
+          "Microsoft.AspNetCore.Http.Abstractions": "2.2.0"
+        },
+        "runtime": {
+          "E-Wallet.BizLogicLayer.dll": {}
+        }
+      },
       "E-Wallet.Core/1.0.0": {
         "runtime": {
           "E-Wallet.Core.dll": {}
@@ -324,6 +358,8 @@
       },
       "E-Wallet.DataLayer/1.0.0": {
         "dependencies": {
+          "E-Wallet.Core": "1.0.0",
+          "GenericServices.StatusGeneric": "1.1.0",
           "Microsoft.EntityFrameworkCore": "7.0.4"
         },
         "runtime": {
@@ -348,12 +384,33 @@
       "serviceable": false,
       "sha512": ""
     },
+    "GenericServices.StatusGeneric/1.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Uf7qaKnWiI0YXkrPTPJ760wYSOre4/X+uMP1so4a5w6Ik6p+8Oo43HsARNsETg9PgnbGgUvFAqa1ePWKL3fr+w==",
+      "path": "genericservices.statusgeneric/1.1.0",
+      "hashPath": "genericservices.statusgeneric.1.1.0.nupkg.sha512"
+    },
     "Humanizer.Core/2.14.1": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-lQKvtaTDOXnoVJ20ibTuSIOf2i0uO0MPbDhd1jm238I+U/2ZnRENj0cktKZhtchBMtCUSRQ5v4xBCUbKNmyVMw==",
       "path": "humanizer.core/2.14.1",
       "hashPath": "humanizer.core.2.14.1.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.Http.Abstractions/2.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Nxs7Z1q3f1STfLYKJSVXCs1iBl+Ya6E8o4Oy1bCxJ/rNI44E/0f6tbsrVqAWfB7jlnJfyaAtIalBVxPKUPQb4Q==",
+      "path": "microsoft.aspnetcore.http.abstractions/2.2.0",
+      "hashPath": "microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.Http.Features/2.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ziFz5zH8f33En4dX81LW84I6XrYXKf9jg6aM39cM+LffN9KJahViKZ61dGMSO2gd3e+qe5yBRwsesvyqlZaSMg==",
+      "path": "microsoft.aspnetcore.http.features/2.2.0",
+      "hashPath": "microsoft.aspnetcore.http.features.2.2.0.nupkg.sha512"
     },
     "Microsoft.EntityFrameworkCore/7.0.4": {
       "type": "package",
@@ -537,6 +594,13 @@
       "path": "system.codedom/4.4.0",
       "hashPath": "system.codedom.4.4.0.nupkg.sha512"
     },
+    "System.ComponentModel.Annotations/4.6.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-pOd+UhZ3X8xfwKDlgAzowUJNjp8VYVmOHZm++vCd0kq1HZ0zK3mNo2yRXjYgv7Ik/Xi43fmJfND2PLEsQSALCg==",
+      "path": "system.componentmodel.annotations/4.6.0",
+      "hashPath": "system.componentmodel.annotations.4.6.0.nupkg.sha512"
+    },
     "System.Runtime.CompilerServices.Unsafe/6.0.0": {
       "type": "package",
       "serviceable": true,
@@ -557,6 +621,11 @@
       "sha512": "sha512-DaGSsVqKsn/ia6RG8frjwmJonfos0srquhw09TlT8KRw5I43E+4gs+/bZj4K0vShJ5H9imCuXupb4RmS+dBy3w==",
       "path": "system.text.json/7.0.0",
       "hashPath": "system.text.json.7.0.0.nupkg.sha512"
+    },
+    "E-Wallet.BizLogicLayer/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "E-Wallet.Core/1.0.0": {
       "type": "project",

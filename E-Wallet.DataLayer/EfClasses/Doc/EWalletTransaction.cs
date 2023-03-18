@@ -48,6 +48,6 @@ namespace E_Wallet.DataLayer.EfClasses
         public virtual State State { get; set; } = null!;
 
         [ForeignKey(nameof(TypeId))]
-        public virtual Type Type { get; set; } = null!;
+        public virtual DirectionType Type { get; set; } = null!;
     }
 }

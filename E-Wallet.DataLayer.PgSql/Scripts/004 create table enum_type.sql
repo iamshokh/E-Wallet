@@ -1,4 +1,4 @@
-create table enum_type
+create table enum_direction_type
 (
  id				int not null primary key,
  code			varchar(50) null,
@@ -7,5 +7,5 @@ create table enum_type
  created_date	timestamp without time zone default now() not null
 );
 
-insert into enum_type (id, short_name, full_name) 
+insert into enum_direction_type (id, short_name, full_name) 
 VALUES (1,'Replenishment','Replenishment'),(2,'Withdrawal','Withdrawal');

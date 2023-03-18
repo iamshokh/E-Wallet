@@ -1,0 +1,12 @@
+C:\Projects\E-Wallet_Backend\E-Wallet\E-Wallet.DigestAuth\bin\Debug\net6.0\E-Wallet.DigestAuth.deps.json
+C:\Projects\E-Wallet_Backend\E-Wallet\E-Wallet.DigestAuth\bin\Debug\net6.0\E-Wallet.DigestAuth.dll
+C:\Projects\E-Wallet_Backend\E-Wallet\E-Wallet.DigestAuth\bin\Debug\net6.0\E-Wallet.DigestAuth.pdb
+C:\Projects\E-Wallet_Backend\E-Wallet\E-Wallet.DigestAuth\obj\Debug\net6.0\E-Wallet.DigestAuth.csproj.AssemblyReference.cache
+C:\Projects\E-Wallet_Backend\E-Wallet\E-Wallet.DigestAuth\obj\Debug\net6.0\E-Wallet.DigestAuth.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projects\E-Wallet_Backend\E-Wallet\E-Wallet.DigestAuth\obj\Debug\net6.0\E-Wallet.DigestAuth.AssemblyInfoInputs.cache
+C:\Projects\E-Wallet_Backend\E-Wallet\E-Wallet.DigestAuth\obj\Debug\net6.0\E-Wallet.DigestAuth.AssemblyInfo.cs
+C:\Projects\E-Wallet_Backend\E-Wallet\E-Wallet.DigestAuth\obj\Debug\net6.0\E-Wallet.DigestAuth.csproj.CoreCompileInputs.cache
+C:\Projects\E-Wallet_Backend\E-Wallet\E-Wallet.DigestAuth\obj\Debug\net6.0\E-Wallet.DigestAuth.dll
+C:\Projects\E-Wallet_Backend\E-Wallet\E-Wallet.DigestAuth\obj\Debug\net6.0\refint\E-Wallet.DigestAuth.dll
+C:\Projects\E-Wallet_Backend\E-Wallet\E-Wallet.DigestAuth\obj\Debug\net6.0\E-Wallet.DigestAuth.pdb
+C:\Projects\E-Wallet_Backend\E-Wallet\E-Wallet.DigestAuth\obj\Debug\net6.0\ref\E-Wallet.DigestAuth.dll

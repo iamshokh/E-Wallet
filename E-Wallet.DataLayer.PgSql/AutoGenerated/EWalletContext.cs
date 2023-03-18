@@ -19,9 +19,9 @@ public partial class EWalletContext : DbContext
 
     public virtual DbSet<EWalletTransaction> EWalletTransactions { get; set; }
 
-    public virtual DbSet<EnumState> EnumStates { get; set; }
+    public virtual DbSet<EnumDirectionType> EnumDirectionTypes { get; set; }
 
-    public virtual DbSet<EnumType> EnumTypes { get; set; }
+    public virtual DbSet<EnumState> EnumStates { get; set; }
 
     public virtual DbSet<SysUser> SysUsers { get; set; }
 
@@ -52,6 +52,10 @@ public partial class EWalletContext : DbContext
 
             entity.Property(e => e.CreatedDate).HasDefaultValueSql("now()");
 
+            entity.HasOne(d => d.DirectionType).WithMany(p => p.EWalletTransactions)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("fk_direction_type_id");
+
             entity.HasOne(d => d.EWallet).WithMany(p => p.EWalletTransactions)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("fk_e_wallet_id");
@@ -59,23 +63,19 @@ public partial class EWalletContext : DbContext
             entity.HasOne(d => d.State).WithMany(p => p.EWalletTransactions)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("fk_state_id");
-
-            entity.HasOne(d => d.Type).WithMany(p => p.EWalletTransactions)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("fk_type_id");
         });
 
-        modelBuilder.Entity<EnumState>(entity =>
+        modelBuilder.Entity<EnumDirectionType>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("enum_state_pkey");
+            entity.HasKey(e => e.Id).HasName("enum_direction_type_pkey");
 
             entity.Property(e => e.Id).ValueGeneratedNever();
             entity.Property(e => e.CreatedDate).HasDefaultValueSql("now()");
         });
 
-        modelBuilder.Entity<EnumType>(entity =>
+        modelBuilder.Entity<EnumState>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("enum_type_pkey");
+            entity.HasKey(e => e.Id).HasName("enum_state_pkey");
 
             entity.Property(e => e.Id).ValueGeneratedNever();
             entity.Property(e => e.CreatedDate).HasDefaultValueSql("now()");

@@ -17,6 +17,17 @@
           "E-Wallet.DataLayer.PgSql.dll": {}
         }
       },
+      "GenericServices.StatusGeneric/1.1.0": {
+        "dependencies": {
+          "System.ComponentModel.Annotations": "4.6.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/StatusGeneric.dll": {
+            "assemblyVersion": "1.1.0.0",
+            "fileVersion": "1.1.0.0"
+          }
+        }
+      },
       "Humanizer.Core/2.14.1": {
         "runtime": {
           "lib/net6.0/Humanizer.dll": {
@@ -238,6 +249,7 @@
           }
         }
       },
+      "System.ComponentModel.Annotations/4.6.0": {},
       "System.Runtime.CompilerServices.Unsafe/6.0.0": {},
       "System.Text.Encodings.Web/7.0.0": {
         "dependencies": {
@@ -270,8 +282,15 @@
           }
         }
       },
+      "E-Wallet.Core/1.0.0": {
+        "runtime": {
+          "E-Wallet.Core.dll": {}
+        }
+      },
       "E-Wallet.DataLayer/1.0.0": {
         "dependencies": {
+          "E-Wallet.Core": "1.0.0",
+          "GenericServices.StatusGeneric": "1.1.0",
           "Microsoft.EntityFrameworkCore": "7.0.4"
         },
         "runtime": {
@@ -285,6 +304,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "GenericServices.StatusGeneric/1.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Uf7qaKnWiI0YXkrPTPJ760wYSOre4/X+uMP1so4a5w6Ik6p+8Oo43HsARNsETg9PgnbGgUvFAqa1ePWKL3fr+w==",
+      "path": "genericservices.statusgeneric/1.1.0",
+      "hashPath": "genericservices.statusgeneric.1.1.0.nupkg.sha512"
     },
     "Humanizer.Core/2.14.1": {
       "type": "package",
@@ -433,6 +459,13 @@
       "path": "system.codedom/4.4.0",
       "hashPath": "system.codedom.4.4.0.nupkg.sha512"
     },
+    "System.ComponentModel.Annotations/4.6.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-pOd+UhZ3X8xfwKDlgAzowUJNjp8VYVmOHZm++vCd0kq1HZ0zK3mNo2yRXjYgv7Ik/Xi43fmJfND2PLEsQSALCg==",
+      "path": "system.componentmodel.annotations/4.6.0",
+      "hashPath": "system.componentmodel.annotations.4.6.0.nupkg.sha512"
+    },
     "System.Runtime.CompilerServices.Unsafe/6.0.0": {
       "type": "package",
       "serviceable": true,
@@ -453,6 +486,11 @@
       "sha512": "sha512-DaGSsVqKsn/ia6RG8frjwmJonfos0srquhw09TlT8KRw5I43E+4gs+/bZj4K0vShJ5H9imCuXupb4RmS+dBy3w==",
       "path": "system.text.json/7.0.0",
       "hashPath": "system.text.json.7.0.0.nupkg.sha512"
+    },
+    "E-Wallet.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "E-Wallet.DataLayer/1.0.0": {
       "type": "project",

@@ -18,13 +18,13 @@ public partial class SysUser
     [StringLength(250)]
     public string UserName { get; set; } = null!;
 
-    [Column("digest_hash")]
+    [Column("password_hash")]
     [StringLength(250)]
-    public string DigestHash { get; set; } = null!;
+    public string PasswordHash { get; set; } = null!;
 
-    [Column("digest_signature")]
+    [Column("password_salt")]
     [StringLength(250)]
-    public string DigestSignature { get; set; } = null!;
+    public string PasswordSalt { get; set; } = null!;
 
     [Column("email")]
     [StringLength(250)]

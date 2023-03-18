@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using E_Wallet.Core.Security;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -26,13 +27,13 @@ namespace E_Wallet.DataLayer.EfClasses
         [StringLength(250)]
         public string UserName { get; set; } = null!;
 
-        [Column("digest_hash")]
+        [Column("password_hash")]
         [StringLength(250)]
-        public string DigestHash { get; set; } = null!;
+        public string PasswordHash { get; set; } = null!;
 
-        [Column("digest_signature")]
+        [Column("password_salt")]
         [StringLength(250)]
-        public string DigestSignature { get; set; } = null!;
+        public string PasswordSalt { get; set; } = null!;
 
         [Column("email")]
         [StringLength(250)]
@@ -76,5 +77,18 @@ namespace E_Wallet.DataLayer.EfClasses
 
         [ForeignKey(nameof(StateId))]
         public virtual State State { get; set; } = null!;
+
+
+        public void SetPassword(string password, bool isNewEntity = false)
+        {
+            if (isNewEntity && string.IsNullOrEmpty(password))
+                throw new ArgumentException("Пароль требуется для нового пользователя", nameof(password));
+
+            if (isNewEntity || !string.IsNullOrEmpty(password))
+            {
+                PasswordSalt = PasswordHasher.GenerateSalt();
+                PasswordHash = PasswordHasher.GenerateHash(password, PasswordSalt);
+            }
+        }
     }
 }
