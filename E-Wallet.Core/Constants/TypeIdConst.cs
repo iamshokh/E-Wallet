@@ -1,6 +1,6 @@
 ﻿namespace E_Wallet.Core
 {
-    public class TypeIdConst
+    public class DirectionTypeIdConst
     {
         /// <summary>
         /// Поступление

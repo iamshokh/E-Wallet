@@ -92,3 +92,4 @@ C:\Projects\E-Wallet_Backend\E-Wallet\E-Wallet.WebApi\bin\Debug\net6.0\runtimes\
 C:\Projects\E-Wallet_Backend\E-Wallet\E-Wallet.WebApi\bin\Debug\net6.0\StatusGeneric.dll
 C:\Projects\E-Wallet_Backend\E-Wallet\E-Wallet.WebApi\bin\Debug\net6.0\E-Wallet.BizLogicLayer.dll
 C:\Projects\E-Wallet_Backend\E-Wallet\E-Wallet.WebApi\bin\Debug\net6.0\E-Wallet.BizLogicLayer.pdb
+C:\Projects\E-Wallet_Backend\E-Wallet\E-Wallet.WebApi\obj\Debug\net6.0\E-Wallet.WebApi.MvcApplicationPartsAssemblyInfo.cs

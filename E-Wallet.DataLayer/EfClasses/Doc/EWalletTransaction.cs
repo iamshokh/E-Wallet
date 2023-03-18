@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 
 namespace E_Wallet.DataLayer.EfClasses
 {
+    [Table("e_wallet_transaction")]
     public partial class EWalletTransaction
     {
         [Key]
@@ -23,8 +24,8 @@ namespace E_Wallet.DataLayer.EfClasses
         [Precision(18, 2)]
         public decimal Amount { get; set; }
 
-        [Column("type_id")]
-        public int TypeId { get; set; }
+        [Column("direction_type_id")]
+        public int DirectionTypeId { get; set; }
 
         [Column("state_id")]
         public int StateId { get; set; }
@@ -47,7 +48,7 @@ namespace E_Wallet.DataLayer.EfClasses
         [ForeignKey(nameof(StateId))]
         public virtual State State { get; set; } = null!;
 
-        [ForeignKey(nameof(TypeId))]
+        [ForeignKey(nameof(DirectionTypeId))]
         public virtual DirectionType Type { get; set; } = null!;
     }
 }

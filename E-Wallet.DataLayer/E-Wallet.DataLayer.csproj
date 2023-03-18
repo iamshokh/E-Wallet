@@ -17,10 +17,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Repositories\EWallet\Concrete\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\E-Wallet.Core\E-Wallet.Core.csproj" />
   </ItemGroup>
 

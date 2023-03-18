@@ -31,6 +31,7 @@ namespace E_Wallet.DataLayer.Repositories
 
         public User Registrate(RegisterateUserDlDto dto)
         {
+            Random rd = new Random();
             var entity = new User();
             entity.UserName = dto.UserName;
             entity.PhoneNumber = dto.PhoneNumber;
@@ -40,6 +41,7 @@ namespace E_Wallet.DataLayer.Repositories
             entity.StateId = StateIdconst.ACTIVE;
             entity.PasswordSalt = PasswordHasher.GenerateSalt();
             entity.PasswordHash = PasswordHasher.GenerateHash(dto.Password, entity.PasswordSalt);
+            entity.IsIdentificate = rd.Next(0, 9) > 5 ? true : false; 
             return entity;
         }
     }

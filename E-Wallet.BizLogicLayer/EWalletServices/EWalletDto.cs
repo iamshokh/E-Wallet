@@ -3,6 +3,7 @@ namespace E_Wallet.BizLogicLayer.EWalletServices
 {
     public class EWalletDto
     {
+        public int Count { get; set; }
         public string User { get; set; }
 
         public string AccountNumber { get; set; } 

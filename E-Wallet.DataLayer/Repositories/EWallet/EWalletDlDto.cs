@@ -22,6 +22,6 @@ namespace E_Wallet.DataLayer.Repositories
 
         public int StateId { get; set; }
 
-        public List<EWalletTransactionDlDto> EWalletTransactions { get; set; } = new();// List<EWalletTransactionDlDto>(); 
+        public EWalletTransactionDlDto EWalletTransaction { get; set; } = new();// List<EWalletTransactionDlDto>(); 
     }
 }

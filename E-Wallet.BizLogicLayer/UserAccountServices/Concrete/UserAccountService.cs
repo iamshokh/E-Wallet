@@ -1,4 +1,6 @@
-﻿using E_Wallet.DataLayer.EfCode;
+﻿using E_Wallet.Core;
+using E_Wallet.DataLayer.EfClasses;
+using E_Wallet.DataLayer.EfCode;
 using E_Wallet.DataLayer.Repositories;
 using E_Wallet.DataLayer.Repositories.UserAccount;
 using Microsoft.AspNetCore.Http;
@@ -27,16 +29,29 @@ namespace E_Wallet.BizLogicLayer.UserAccountServices
 
         public async Task<string> Registrate(RegisterateUserDlDto dto)
         {
-            
+            Random rd = new Random();
+            string number = "";
+            for (int i = 0; i < 12; i++)
+            {
+                number += rd.Next(0, 9).ToString();
+            }
+
             var user = _repository.Registrate(dto);
-            //CombineStatuses(_repository);
             if (HasErrors)
                 return null;
-            
-            _context.Add(user);
+
+            var eWallet = new EWallet()
+            {
+                AccountNumber = "8600" + number,
+                StateId = StateIdconst.ACTIVE,
+                Balance = 0m,
+                User = user
+            };
+
+            _context.Add(eWallet);
             _context.SaveChanges();
 
-            return "Регистрация прошло успешно";
+            return "Регистрация прошло успешно и вам автоматически открылся счёт";
 
         }
 

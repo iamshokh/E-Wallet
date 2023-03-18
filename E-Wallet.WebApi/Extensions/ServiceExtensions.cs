@@ -1,4 +1,5 @@
-﻿using E_Wallet.BizLogicLayer.UserAccountServices;
+﻿using E_Wallet.BizLogicLayer.EWalletServices;
+using E_Wallet.BizLogicLayer.UserAccountServices;
 
 namespace Microsoft.Extensions.DependencyInjection
 {
@@ -7,6 +8,7 @@ namespace Microsoft.Extensions.DependencyInjection
         public static void ConfigureServices(this IServiceCollection services)
         {
             services.AddScoped<IUserAccountService, UserAccountService>();
+            services.AddScoped<IEwalletService, EWalletService>();
         }
     }
 }

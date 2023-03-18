@@ -12,12 +12,6 @@ namespace E_Wallet.DataLayer.Repositories.EWalletTransaction
     public class EWalletTransactionDlDto
     {
         [Required]
-        public int EWalletId { get; set; }
-        [Required]
         public decimal Amount { get; set; }
-        [Required]
-        public int TypeId { get; set; }
-        [Required]
-        public int StateId { get; set; }
     }
 }
