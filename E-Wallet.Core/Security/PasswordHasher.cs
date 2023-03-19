@@ -42,19 +42,5 @@ namespace E_Wallet.Core.Security
                 return Convert.ToBase64String(resultBytes);
             }
         }
-
-        public static bool VerifyPassword(string password,
-                                          string hash)
-        {
-            byte[] hashBytes = Convert.FromBase64String(hash);
-            byte[] saltBytes = new byte[SaltSize];
-
-            Buffer.BlockCopy(hashBytes, 0, saltBytes, 0, SaltSize);
-
-            string expectedHash = GenerateHash(password: password,
-                                               salt: Convert.ToBase64String(saltBytes));
-            
-            return hash == expectedHash;
-        }
     }
 }

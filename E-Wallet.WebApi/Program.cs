@@ -2,6 +2,7 @@ using E_Wallet.BizLogicLayer.AccountService;
 using E_Wallet.WebApi;
 using E_Wallet.WebApi.Extensions;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Server.Kestrel.Core;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 
@@ -22,7 +23,17 @@ builder.Services.ConfigureSwaggerServices();
 builder.Services.ConfigureServices();
 builder.Services.ConfigureConfigs();
 builder.Services.AddSingleton(AppSettings.Instance.Jwt);
-builder.Services.AddScoped<IAccountService, AccountService>();
+
+builder.Services.Configure<KestrelServerOptions>(options =>
+{
+    options.AllowSynchronousIO = true;
+});
+
+// If using IIS:
+builder.Services.Configure<IISServerOptions>(options =>
+{
+    options.AllowSynchronousIO = true;
+});
 
 var signingKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(AppSettings.Instance.Jwt.SecretKey));
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
@@ -35,6 +46,7 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
             ValidateLifetime = true,
             ValidateIssuerSigningKey = true,
             ValidIssuer = AppSettings.Instance.Jwt.Issuer,
+            ValidAudience = AppSettings.Instance.Jwt.Issuer,
             IssuerSigningKey = signingKey
         };
 

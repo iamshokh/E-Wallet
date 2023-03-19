@@ -9,13 +9,17 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using StatusGeneric;
 using System.IdentityModel.Tokens.Jwt;
+using System.Net;
+using System.Net.Http.Headers;
+using System.Reflection.PortableExecutable;
 using System.Security.Authentication;
 using System.Security.Claims;
+using System.Security.Cryptography;
 using System.Text;
 
 namespace E_Wallet.BizLogicLayer.AccountService
 {
-    public class AccountService : 
+    public class AccountService :
         StatusGenericHandler,
         IAccountService
     {
@@ -45,20 +49,21 @@ namespace E_Wallet.BizLogicLayer.AccountService
 
             var tokenHandler = new JwtSecurityTokenHandler();
 
-            var signingKey = 
+            var signingKey =
                 new SymmetricSecurityKey(Encoding.UTF8.GetBytes(settings.SecretKey));
 
             var tokenDescriptor = new SecurityTokenDescriptor
             {
                 Issuer = settings.Issuer,
-                Expires = DateTime.Now.AddMinutes(settings.ExpiresInMinutes),
+                Audience = settings.Audience,
+                Expires = DateTime.UtcNow.AddMinutes(settings.ExpiresInMinutes),
                 SigningCredentials = new SigningCredentials(signingKey,
                                                             SecurityAlgorithms.HmacSha256),
                 Subject = new ClaimsIdentity(new[]
                 {
-                new Claim(ClaimTypes.Name, username),
-                new Claim(ClaimTypes.Role, "Admin")
-            })
+                    new Claim(ClaimTypes.Name, username),
+                    new Claim(ClaimTypes.Role, "Admin")
+                })
             };
             var token = tokenHandler.CreateToken(tokenDescriptor);
 
@@ -130,7 +135,7 @@ namespace E_Wallet.BizLogicLayer.AccountService
                 }
 
                 var user = repository.Registrate(dto);
-                if(!IsValid)
+                if (!IsValid)
                 {
                     AddError("Ошибка при Регистрации");
                     return null;
@@ -157,5 +162,32 @@ namespace E_Wallet.BizLogicLayer.AccountService
             }
 
         }
+
+        /*public bool IsDigestReal<T>(T data, HttpHeaders headers)
+        {
+            // Verify that the X-UserId and X-Digest headers are present
+            if (!headers.Contains("X-UserId") || !headers.Contains("X-Digest"))
+            {
+                return false;
+            }
+            // Verify that the X-Digest header matches the hash of the request body
+            var userId = headers.GetValues("X-UserId").FirstOrDefault();
+            var digest = headers.GetValues("X-Digest").FirstOrDefault();
+
+            var requestBody = data.ToString();
+            var expectedDigest = CalculateDigest(userId, requestBody);
+
+            return digest == expectedDigest;
+        }
+        private string CalculateDigest(string userId, string requestBody)
+        {
+            var key = Encoding.UTF8.GetBytes(userId);
+            var data = Encoding.UTF8.GetBytes(requestBody);
+            using (var hmac = new HMACSHA1(key))
+            {
+                var hash = hmac.ComputeHash(data);
+                return Convert.ToBase64String(hash);
+            }
+        }*/
     }
 }

@@ -9,6 +9,6 @@ namespace E_Wallet.BizLogicLayer.AccountService
     {
         Task<string> Login(LoginDto dto);
         Task<string> Regester(RegisterateUserDlDto dto);
-
+        //bool IsDigestReal<T>(T data, HeaderDictionary headers);
     }
 }
