@@ -1,5 +1,6 @@
 ﻿using E_Wallet.BizLogicLayer.AccountService;
 using E_Wallet.BizLogicLayer.UserAccountServices;
+using E_Wallet.Core.Attributes;
 using E_Wallet.Core.Helpers;
 using E_Wallet.DataLayer.Repositories.UserAccount;
 using Microsoft.AspNetCore.Mvc;
@@ -34,6 +35,7 @@ namespace E_Wallet.WebApi.Controllers
         }
 
         [HttpPost]
+        [XDigestValidationFilter("X-UserId")]
         public async Task<IActionResult> SignIn([FromBody] LoginDto dto)
         {
             if (ModelState.IsValid)

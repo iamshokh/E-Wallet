@@ -44,7 +44,7 @@ namespace E_Wallet.BizLogicLayer.AccountService
         {
             if (!IsValidUser(username, password))
             {
-                throw new AuthenticationException("Invalid username or password");
+                throw new AuthenticationException("Неправильное имя пользователя или пароль");
             }
 
             var tokenHandler = new JwtSecurityTokenHandler();
@@ -76,7 +76,7 @@ namespace E_Wallet.BizLogicLayer.AccountService
             if (string.IsNullOrWhiteSpace(userName) ||
                 string.IsNullOrWhiteSpace(password))
             {
-                AddError("Имя пользователя или пароль неправильно");
+                AddError("Неправильное имя пользователя или пароль");
                 return false;
             }
 
@@ -84,22 +84,8 @@ namespace E_Wallet.BizLogicLayer.AccountService
 
             if (user == null)
             {
-                AddError("Имя пользователя или пароль неправильно");
+                AddError("Неправильное имя пользователя или пароль");
                 return false;
-            }
-
-            if (IsValid)
-            {
-                //AddUserLog(UserLogAction.LoginByPassword, user.UserName, user.Id);
-                //_repository.UpdateUserLastAccessTime(user.Id);
-                //string token = _authService.GenerateToken(user.UserName, user.UserRoles.IsActive().FirstOrDefault().RoleId);
-                ////_authService.ResetUserName(user.UserName);
-                ////_authService.ResetRoleId(user.UserRoles.IsActive().FirstOrDefault().RoleId);
-
-                //return new UserLoginResultDto
-                //{
-                //    Token = token
-                //};
             }
 
             return true;
@@ -162,32 +148,5 @@ namespace E_Wallet.BizLogicLayer.AccountService
             }
 
         }
-
-        /*public bool IsDigestReal<T>(T data, HttpHeaders headers)
-        {
-            // Verify that the X-UserId and X-Digest headers are present
-            if (!headers.Contains("X-UserId") || !headers.Contains("X-Digest"))
-            {
-                return false;
-            }
-            // Verify that the X-Digest header matches the hash of the request body
-            var userId = headers.GetValues("X-UserId").FirstOrDefault();
-            var digest = headers.GetValues("X-Digest").FirstOrDefault();
-
-            var requestBody = data.ToString();
-            var expectedDigest = CalculateDigest(userId, requestBody);
-
-            return digest == expectedDigest;
-        }
-        private string CalculateDigest(string userId, string requestBody)
-        {
-            var key = Encoding.UTF8.GetBytes(userId);
-            var data = Encoding.UTF8.GetBytes(requestBody);
-            using (var hmac = new HMACSHA1(key))
-            {
-                var hash = hmac.ComputeHash(data);
-                return Convert.ToBase64String(hash);
-            }
-        }*/
     }
 }

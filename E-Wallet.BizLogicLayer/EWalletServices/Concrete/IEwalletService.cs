@@ -13,6 +13,6 @@ namespace E_Wallet.BizLogicLayer.EWalletServices
         UserDto AccountExists(string accountNumber);
         Task<string> ReplenishWallet(ReplenishWalletRequestDto dto);
         EWalletDto MonthlyOperations(string accountNumber);
-        decimal GetBalance(string accountNumber);
+        string GetBalance(string accountNumber);
     }
 }

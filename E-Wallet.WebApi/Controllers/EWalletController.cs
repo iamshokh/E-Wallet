@@ -8,7 +8,7 @@ using System.Net.Http.Headers;
 
 namespace E_Wallet.WebApi.Controllers
 {
-   // [Authorize(Roles = "Admin")]
+    //[Authorize(Roles = "Admin")]
     [Route("[controller]/[action]")]
     [ApiController]
     public class EWalletController : ControllerBase

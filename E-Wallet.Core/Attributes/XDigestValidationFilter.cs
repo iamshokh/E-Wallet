@@ -17,17 +17,14 @@ namespace E_Wallet.Core.Attributes
 
         public override void OnActionExecuting(ActionExecutingContext actionContext)
         {
-            // Get the X-Digest header value from the request
             string xDigestHeader = actionContext.HttpContext.Request.Headers["X-Digest"];
+            string xUserId = actionContext.HttpContext.Request.Headers["X-UserId"];
 
-            // Get the request body as a string
             string requestBody = new StreamReader(actionContext.HttpContext.Request.Body).ReadToEnd();
 
-            // Validate the X-Digest header using the request body and the secret key
-            if (!ValidateXDigest(xDigestHeader, requestBody, actionContext.HttpContext.Request.Headers["X-UserId"]))
+            if (!ValidateXDigest(xDigestHeader, requestBody, xUserId))
             {
-                // Return a 400 Bad Request response if the X-Digest header is invalid
-                actionContext.Result = new BadRequestObjectResult("Invalid X-Digest header");
+                actionContext.Result = new BadRequestObjectResult("X-Digest не равен хэш-сумма тела запроса");
             }
         }
 
@@ -35,13 +32,11 @@ namespace E_Wallet.Core.Attributes
                                      string requestBody,
                                      string userId)
         {
-            // If the X-Digest header is not present, return false
             if (string.IsNullOrEmpty(xDigestHeader))
             {
                 return false;
             }
 
-            // Compute the HMAC-SHA256 hash of the request body using the secret key
             var key = Encoding.UTF8.GetBytes(userId);
             var data = Encoding.UTF8.GetBytes(requestBody);
 

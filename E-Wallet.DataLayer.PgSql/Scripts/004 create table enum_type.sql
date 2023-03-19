@@ -7,5 +7,5 @@ create table enum_direction_type
  created_date	timestamp without time zone default now() not null
 );
 
-insert into enum_direction_type (id, short_name, full_name) 
-VALUES (1,'Replenishment','Replenishment'),(2,'Withdrawal','Withdrawal');
+insert into enum_direction_type (id,code, short_name, full_name) 
+VALUES (1,'001','Пополнение','Пополнение'),(2,'002','Расход','Расход');

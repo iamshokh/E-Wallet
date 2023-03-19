@@ -107,3 +107,4 @@ C:\Projects\E-Wallet_Backend\E-Wallet\E-Wallet.WebApi\bin\Debug\net6.0\Newtonsof
 C:\Projects\E-Wallet_Backend\E-Wallet\E-Wallet.WebApi\bin\Debug\net6.0\Swashbuckle.AspNetCore.Newtonsoft.dll
 C:\Projects\E-Wallet_Backend\E-Wallet\E-Wallet.WebApi\bin\Debug\net6.0\System.Net.Http.Formatting.dll
 C:\Projects\E-Wallet_Backend\E-Wallet\E-Wallet.WebApi\bin\Debug\net6.0\System.Web.Http.dll
+C:\Projects\E-Wallet_Backend\E-Wallet\E-Wallet.WebApi\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll

@@ -25,20 +25,27 @@ namespace E_Wallet.BizLogicLayer.EWalletServices
 
         public UserDto AccountExists(string accountNumber)
         {
-            var eWallet = _context.EWallets.Find(accountNumber);
+            var eWallet = _context.EWallets.FirstOrDefault(a => a.AccountNumber == accountNumber);
             if (eWallet == null)
             {
-                AddError("Не существует аккаунт");
+                AddError("Не существует кошелька");
                 return null;
             }
+            var user = _context.Users.FirstOrDefault(a => a.Id == eWallet.UserId);
+            if (eWallet == null)
+            {
+                AddError("Не существует аккаунта");
+                return null;
+            }
+
             var result = new UserDto()
             {
                 Id = eWallet.UserId,
-                Email = eWallet.User.Email,
-                Fullname = eWallet.User.Fullname,
-                PhoneNumber = eWallet.User.PhoneNumber,
-                Shortname = eWallet.User.Shortname,
-                UserName = eWallet.User.UserName
+                Email = user.Email,
+                Fullname = user.Fullname,
+                PhoneNumber = user.PhoneNumber,
+                Shortname = user.Shortname,
+                UserName = user.UserName
             };
             return result;
         }
@@ -88,6 +95,13 @@ namespace E_Wallet.BizLogicLayer.EWalletServices
                 return null;
             }
 
+            var user = _context.Users.FirstOrDefault(a => a.Id == eWallet.UserId);
+            if (eWallet == null)
+            {
+                AddError("Не существует аккаунта");
+                return null;
+            }
+
             var eWalletTransactions = _context.EWalletTransactions.Where(a => a.EWalletId == eWallet.Id).ToList();
             var eWalletTransactionsDto = new List<EWalletTransactionDto>();
             foreach (var transaction in eWalletTransactions)
@@ -101,18 +115,20 @@ namespace E_Wallet.BizLogicLayer.EWalletServices
             }
             var result = new EWalletDto()
             {
+                Count = eWalletTransactionsDto.Count.ToString() + " транзакции в этом месяце",
                 AccountNumber = eWallet.AccountNumber,
-                Balance = eWallet.Balance,
-                User = eWallet.User.UserName,
+                Balance = eWallet.Balance.ToString() + " сомони",
+                User = user.UserName,
                 EWalletTransactions = eWalletTransactionsDto
             };
 
             return result;
         }
 
-        public decimal GetBalance(string accountNumber)
+        public string GetBalance(string accountNumber)
         {
-            return _context.EWallets.FirstOrDefault(a => a.AccountNumber == accountNumber).Balance;
+            string money = _context.EWallets.FirstOrDefault(a => a.AccountNumber == accountNumber).Balance.ToString();
+            return $"Ваш баланс на кошельке {money} сомони.";
         }
     }
 }
