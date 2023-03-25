@@ -57,7 +57,7 @@ namespace Microsoft.Extensions.DependencyInjection
                 c.ResolveConflictingActions(apiDescriptions => apiDescriptions.First());
 
             });
-            //services.AddSwaggerGenNewtonsoftSupport();
+            services.AddSwaggerGenNewtonsoftSupport();
         }
     }
 

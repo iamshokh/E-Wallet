@@ -79,6 +79,10 @@ namespace E_Wallet.DataLayer.EfClasses
         public virtual State State { get; set; } = null!;
 
 
+        public bool IsValidPassword(string password)
+        {
+            return !(string.IsNullOrEmpty(password) || PasswordHasher.GenerateHash(password, PasswordSalt) != PasswordHash);
+        }
         public void SetPassword(string password, bool isNewEntity = false)
         {
             if (isNewEntity && string.IsNullOrEmpty(password))

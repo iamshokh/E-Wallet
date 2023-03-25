@@ -24,7 +24,7 @@ namespace E_Wallet.Core.Attributes
 
             if (!ValidateXDigest(xDigestHeader, requestBody, xUserId))
             {
-                actionContext.Result = new BadRequestObjectResult("X-Digest не равен хэш-сумма тела запроса");
+                actionContext.Result = new BadRequestObjectResult("X-Digest не равен хэш-сумме тела запроса");
             }
         }
 

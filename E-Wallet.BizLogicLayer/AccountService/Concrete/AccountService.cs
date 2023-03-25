@@ -44,7 +44,8 @@ namespace E_Wallet.BizLogicLayer.AccountService
         {
             if (!IsValidUser(username, password))
             {
-                throw new AuthenticationException("Неправильное имя пользователя или пароль");
+                AddError("Неправильное имя пользователя или пароль");
+                return null;
             }
 
             var tokenHandler = new JwtSecurityTokenHandler();
@@ -65,7 +66,17 @@ namespace E_Wallet.BizLogicLayer.AccountService
                     new Claim(ClaimTypes.Role, "Admin")
                 })
             };
+
+
             var token = tokenHandler.CreateToken(tokenDescriptor);
+
+            //List<Claim> claims = new List<Claim>
+            //{
+            //    new Claim("sub", username),
+            //    new Claim("role", "Admin")
+            //};
+            //JwtSecurityToken token2 = new JwtSecurityToken(settings.Issuer, settings.Issuer, claims, null, DateTime.UtcNow.AddMinutes(settings.ExpiresInMinutes), new SigningCredentials(signingKey,
+            //                                                SecurityAlgorithms.HmacSha256));
 
             return tokenHandler.WriteToken(token);
         }
@@ -76,15 +87,15 @@ namespace E_Wallet.BizLogicLayer.AccountService
             if (string.IsNullOrWhiteSpace(userName) ||
                 string.IsNullOrWhiteSpace(password))
             {
-                AddError("Неправильное имя пользователя или пароль");
+                //AddError("Неправильное имя пользователя или пароль");
                 return false;
             }
 
             var user = repository.ByUserName(userName);
 
-            if (user == null)
+            if (user == null || !user.IsValidPassword(password))
             {
-                AddError("Неправильное имя пользователя или пароль");
+                //ddError("Неправильное имя пользователя или пароль");
                 return false;
             }
 
